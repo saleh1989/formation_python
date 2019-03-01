@@ -1,6 +1,6 @@
 # -*- coding: cp1252 -*-
 from random import *
-#numero a miser doit etre compris entre 0 et 49
+from math import ceil
 
 num=-1
 somme=-1
@@ -19,7 +19,7 @@ while (num >49 or num<0):
 
 while (somme <= 0):
     try:
-        somme = input("Saisissez la somme que vous souhaite miser:")
+        somme = input("Saisissez la sommede votre mise:")
         somme = int(somme) # Conversion de l'année
         assert (somme > 0)
     except NameError:
@@ -31,15 +31,16 @@ while (somme <= 0):
 
 
 num_gangant=randrange(50)
-print num_gangant
+print "la roulette s'arrette sur le numéro:%s" %num_gangant
 
 if (num_gangant==num):
     gain=somme*3
+    print "Vous obtenez %s$"%gain
 elif(num_gangant % 2 == num % 2):
     gain=ceil(somme/2)
+    print "bonne couleur.Vous obtenez %s$"%gain
 else:
-    gain=0
-print gain
+    print "Vous perdez votre mise"
     
         
 
