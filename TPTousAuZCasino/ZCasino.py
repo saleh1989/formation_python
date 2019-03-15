@@ -41,6 +41,3 @@ elif(num_gangant % 2 == num % 2):
     print "bonne couleur.Vous obtenez %s$"%gain
 else:
     print "Vous perdez votre mise"
-    
-        
-
